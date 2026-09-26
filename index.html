@@ -147,6 +147,11 @@
         .hero-typewriter .cursor { display: inline-block; width: 2px; height: 1em; background: var(--accent); margin-left: 4px; animation: blink 1s step-end infinite; vertical-align: text-bottom; }
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
         .hero-subtitle { font-size: clamp(18px, 2.5vw, 22px); font-weight: 400; color: var(--text-secondary); max-width: 640px; margin: 0 auto 40px; line-height: 1.5; opacity: 0; transform: translateY(30px); }
+        .hero-proof { list-style: none; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 0 auto 32px; padding: 0; opacity: 0; transform: translateY(30px); }
+        .hero-proof li { padding: 8px 16px; border: 1px solid var(--border); border-radius: 980px; font-size: 14px; color: var(--text-secondary); }
+        .hero-proof strong { color: var(--accent); font-weight: 600; }
+        .nav-cta { display: inline-flex; align-items: center; padding: 8px 18px; background: var(--accent); color: #fff; border-radius: 980px; font-size: 14px; font-weight: 500; text-decoration: none; transition: box-shadow 0.3s; }
+        .nav-cta:hover { box-shadow: 0 0 24px var(--accent-glow); }
         .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
         .hero-cta { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; background: var(--accent); color: #fff; text-decoration: none; border-radius: 980px; font-size: 17px; font-weight: 500; letter-spacing: -0.022em; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); opacity: 0; transform: translateY(30px); border: 1.5px solid var(--accent); }
         .hero-cta:hover { transform: scale(1.05); box-shadow: 0 0 40px var(--accent-glow); }
@@ -318,6 +323,7 @@
                 </div>
             </div>
             <div class="nav-right">
+                <a href="mailto:moizambique@gmail.com" class="nav-cta">Email me</a>
                 <ul class="nav-links">
                     <li><a href="#about" onclick="event.preventDefault(); lenis.scrollTo('#about')">About</a></li>
                     <li><a href="#experience" onclick="event.preventDefault(); lenis.scrollTo('#experience')">Experience</a></li>
@@ -357,14 +363,19 @@
         <div class="hero-bg"></div>
         <div class="hero-content">
             <p class="hero-eyebrow">B.S. Computer Science &bull; Honors &bull; GPA 3.83 &bull; Dec 2025</p>
-            <h1>Building systems<br>that <span>save lives.</span></h1>
+            <h1>Embedded &amp; full-stack<br>software <span>engineer.</span></h1>
             <div class="hero-typewriter" id="typewriter">
                 <span id="typewriterText"></span><span class="cursor"></span>
             </div>
-            <p class="hero-subtitle">Software engineer specializing in embedded systems, automation, and full-stack development. From FDA-regulated cardiac devices to enterprise cloud platforms.</p>
+            <p class="hero-subtitle">I build automation and production software, from FDA-regulated cardiac device test systems to e-commerce platforms. Based in Stockton, CA. Open to roles across the Bay Area, Sacramento/Stockton, and Central Valley. Authorized to work in the U.S. (F-1 OPT).</p>
+            <ul class="hero-proof" aria-label="Highlights">
+                <li><strong>72 hr</strong> unattended test cycles</li>
+                <li><strong>~$36K</strong> saved per validation cycle</li>
+                <li><strong>40,000+</strong> SKUs on a platform I built</li>
+            </ul>
             <div class="hero-ctas">
-                <a href="#projects" class="hero-cta" onclick="event.preventDefault(); lenis.scrollTo('#projects')">
-                    View My Work
+                <a href="mailto:moizambique@gmail.com" class="hero-cta">
+                    Email Me
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -375,6 +386,7 @@
                         <path d="M8 2v8M8 10l-3-3m3 3l3-3M3 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </a>
+                <a href="#projects" class="hero-cta-secondary" onclick="event.preventDefault(); lenis.scrollTo('#projects')">View My Work</a>
             </div>
         </div>
         <div class="scroll-indicator"></div>
@@ -1007,6 +1019,7 @@
         gsap.to('.hero h1', { opacity: 1, y: 0, duration: 1, delay: 0.4, ease: 'power3.out' });
         gsap.to('.hero-typewriter', { opacity: 1, y: 0, duration: 1, delay: 0.5, ease: 'power3.out', onComplete: typeWriter });
         gsap.to('.hero-subtitle', { opacity: 1, y: 0, duration: 1, delay: 0.7, ease: 'power3.out' });
+        gsap.to('.hero-proof', { opacity: 1, y: 0, duration: 1, delay: 0.8, ease: 'power3.out' });
         gsap.to('.hero-cta', { opacity: 1, y: 0, duration: 1, delay: 0.9, ease: 'power3.out' });
         gsap.to('.hero-cta-secondary', { opacity: 1, y: 0, duration: 1, delay: 1.05, ease: 'power3.out' });
         gsap.to('.scroll-indicator', { opacity: 1, duration: 1, delay: 1.3, ease: 'power3.out' });
