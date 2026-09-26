@@ -13,6 +13,9 @@
     <meta property="og:title" content="Muhammad Moiz Bukhari | Software Engineer">
     <meta property="og:description" content="B.S. Computer Science (Honors, GPA 3.83). Embedded systems, automation, and full-stack development. From FDA-regulated cardiac devices to enterprise cloud platforms.">
     <meta property="og:image" content="https://moizambique.github.io/profile.jpg">
+    <meta property="og:image:alt" content="Portrait of Muhammad Moiz Bukhari">
+    <meta name="twitter:card" content="summary">
+    <meta name="theme-color" content="#000000">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -147,6 +150,12 @@
         .hero-typewriter .cursor { display: inline-block; width: 2px; height: 1em; background: var(--accent); margin-left: 4px; animation: blink 1s step-end infinite; vertical-align: text-bottom; }
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
         .hero-subtitle { font-size: clamp(18px, 2.5vw, 22px); font-weight: 400; color: var(--text-secondary); max-width: 640px; margin: 0 auto 40px; line-height: 1.5; opacity: 0; transform: translateY(30px); }
+        .more-details { margin-top: 8px; }
+        .more-details summary { cursor: pointer; color: var(--accent); font-size: 15px; font-weight: 500; padding: 4px 0; }
+        .more-details summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+        .more-details ul { margin-top: 8px; }
+        .project-result { font-size: 14px; line-height: 1.5; color: var(--text); margin-bottom: 20px; padding: 12px 14px; border-left: 3px solid var(--accent); background: rgba(128, 128, 128, 0.05); border-radius: 0 10px 10px 0; }
+        .project-result span { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 4px; }
         .hero-proof { list-style: none; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 0 auto 32px; padding: 0; opacity: 0; transform: translateY(30px); }
         .hero-proof li { padding: 8px 16px; border: 1px solid var(--border); border-radius: 980px; font-size: 14px; color: var(--text-secondary); }
         .hero-proof strong { color: var(--accent); font-weight: 600; }
@@ -367,7 +376,7 @@
             <div class="hero-typewriter" id="typewriter">
                 <span id="typewriterText"></span><span class="cursor"></span>
             </div>
-            <p class="hero-subtitle">I build automation and production software, from FDA-regulated cardiac device test systems to e-commerce platforms. Based in Stockton, CA. Open to roles across the Bay Area, Sacramento/Stockton, and Central Valley. Authorized to work in the U.S. (F-1 OPT).</p>
+            <p class="hero-subtitle">Automation and production software, from FDA-regulated cardiac device testing to e-commerce. Work-authorized (F-1 OPT).</p>
             <ul class="hero-proof" aria-label="Highlights">
                 <li><strong>72 hr</strong> unattended test cycles</li>
                 <li><strong>~$36K</strong> saved per validation cycle</li>
@@ -411,7 +420,7 @@
                     <div class="about-text">
                         <p>I am a <strong>B.S. Computer Science graduate (Honors, GPA 3.83)</strong> from the University of the Pacific with deep expertise in embedded systems, automation, and full-stack engineering. I architect production-grade software that eliminates inefficiencies and ensures regulatory compliance.</p>
                         <p>At <strong>Abbott Laboratories</strong>, I designed an Arduino-based power automation fixture with relay control, color sensor feedback, and battery detection logic to automate long-duration testing on a Class III cardiac device program, and supported summative human factors studies with patients and clinicians. At <strong>TWM Wholesale</strong>, I built 10+ automation scripts for inventory, procurement, and supplier workflows, reducing ~3&ndash;4 hours/day of manual data entry.</p>
-                        <p>I am currently on F-1 OPT and open to software engineering opportunities across the Bay Area, Sacramento/Stockton region, and Central Valley.</p>
+                        <p>I am currently on F-1 OPT and open to software engineering opportunities.</p>
                     </div>
                     <div class="about-meta">
                         <p><strong>Certifications:</strong> Certified Scrum Master (Scrum Alliance)</p>
@@ -486,9 +495,14 @@
                                 <li>Enabled <strong>72-hour unattended endurance test cycles</strong> across multiple fixtures with zero manual intervention by combining embedded C/C++ firmware with Python test sequencing, real-time logging, and anomaly detection</li>
                                 <li>Executed formal Verification &amp; Validation protocols confirming BLE communication across multiple pairing scenarios on a <strong>Class III cardiac device program</strong>, documenting results with full traceability to design inputs</li>
                                 <li>Supported <strong>3 summative human factors studies</strong> across 3 sites for next-generation cardiac device systems, facilitating sessions with patients and healthcare providers and handling A/V, livestreaming, and real-time troubleshooting</li>
+                            </ul>
+                            <details class="more-details">
+                                <summary>More details</summary>
+                                <ul>
                                 <li>Released 4 test fixtures for V&amp;V and Long-Term Testing by authoring <strong>IQ/OQ validation packages</strong>, PMs, drawings, and change orders in Windchill PLM, maintaining full audit traceability under FDA 21 CFR 820 and ISO 13485</li>
                                 <li>Assembled and validated fixture hardware end-to-end &mdash; soldering, wiring, and continuity/voltage testing against schematics &mdash; collaborating directly with mechanical and electrical engineering teams</li>
-                            </ul>
+                                </ul>
+                            </details>
                         </div>
                     </div>
                 </div>
@@ -514,13 +528,13 @@
         <div class="section-container">
             <p class="section-eyebrow">Featured Work</p>
             <h2 class="section-title">Projects that<br>define my craft.</h2>
-            <p class="section-desc">Hover over any project to preview the full details. On mobile, tap to expand.</p>
+            <p class="section-desc">Each card leads with the result. Hover (or tap on mobile) for the problem, solution, and stack.</p>
 
             <div class="projects-grid">
                 <!-- Power Automation Fixture -->
                 <article class="project-card" data-project="fixture">
                     <div class="project-image">
-                        <img src="./fixture.jpeg" alt="Power Automation Fixture" loading="lazy">
+                        <img src="./fixture.jpeg" alt="Arduino-based power automation fixture used for HeartMate Touch Monitor endurance testing" loading="lazy">
                     </div>
                     <div class="project-content">
                         <div class="project-tags">
@@ -531,6 +545,7 @@
                         </div>
                         <h3 class="project-title">Power Automation Fixture</h3>
                         <p class="project-desc">Microcontroller-based automation system for battery-powered device testing with relay control, sensor feedback, and LCD status display.</p>
+                        <p class="project-result"><span>Result</span> Turned 72-hour endurance testing into <strong>unattended cycles with zero manual intervention</strong>, removing the need for overnight technician monitoring.</p>
 
                         <div class="hover-hint">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -559,11 +574,6 @@
                                     <div class="expand-stat-number">5</div>
                                     <div class="expand-stat-label">Firmware revisions</div>
                                 </div>
-                            </div>
-
-                            <div class="key-outcome">
-                                <div class="key-outcome-label">Key Outcome</div>
-                                <p>Turned 72-hour endurance testing into <strong>unattended cycles with zero manual intervention</strong>, removing the need for overnight technician monitoring.</p>
                             </div>
 
                             <div class="expand-section">
@@ -628,6 +638,7 @@
                         </div>
                         <h3 class="project-title">End-to-End Encrypted Messenger</h3>
                         <p class="project-desc">Two-person team project: a mobile messenger implementing the Signal Protocol for end-to-end encrypted, real-time messaging.</p>
+                        <p class="project-result"><span>Result</span> Built a working <strong>end-to-end encrypted messaging stack</strong> on the Signal Protocol, with real-time delivery and contact identity verification.</p>
 
                         <div class="hover-hint">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -643,10 +654,6 @@
                         </div>
 
                         <div class="project-expand">
-                            <div class="key-outcome">
-                                <div class="key-outcome-label">Key Outcome</div>
-                                <p>Built a working <strong>end-to-end encrypted messaging stack</strong> on the Signal Protocol, with real-time delivery and contact identity verification.</p>
-                            </div>
 
                             <div class="expand-section">
                                 <h4>Security</h4>
@@ -699,6 +706,7 @@
                         </div>
                         <h3 class="project-title">WaterCon &ndash; Cloud IoT Platform</h3>
                         <p class="project-desc">Cloud-connected IoT platform with REST APIs, normalized SQL storage, and Python ingestion pipelines for live sensor telemetry.</p>
+                        <p class="project-result"><span>Result</span> Reduced stakeholder reporting lag from <strong>hours to seconds</strong> while maintaining 99.5% platform uptime.</p>
 
                         <div class="hover-hint">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -714,10 +722,6 @@
                         </div>
 
                         <div class="project-expand">
-                            <div class="key-outcome">
-                                <div class="key-outcome-label">Key Outcome</div>
-                                <p>Reduced stakeholder reporting lag from <strong>hours to seconds</strong> while maintaining 99.5% platform uptime.</p>
-                            </div>
 
                             <div class="expand-section">
                                 <h4>System Architecture</h4>
@@ -843,7 +847,7 @@
         <div class="section-container">
             <p class="section-eyebrow">Get In Touch</p>
             <h2 class="section-title">Let's build<br>something great.</h2>
-            <p class="section-desc">Currently open to Software Engineer, Systems Engineer, Embedded Software Engineer, and DevOps roles across the Bay Area, Sacramento/Stockton, and Central Valley. Remote, hybrid, and onsite friendly.</p>
+            <p class="section-desc">Currently open to Software Engineer, Systems Engineer, Embedded Software Engineer, and DevOps roles. Remote, hybrid, and onsite friendly.</p>
 
             <div class="opt-badge" style="margin: 0 auto 32px; width: fit-content;">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
